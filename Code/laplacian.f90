@@ -11,15 +11,18 @@ integer:: i,j,x,y,x_length,y_length
 x_length=10
 y_length=10
 
-do i = 0,x_length
-   do j=0,y_length,2
+do i = 1,x_length
+   do j=1,y_length,2
       !For every other row ofset by 1
       x=i
       y=j
       if (mod(x,2)==0) then 
          y=y+1
       end if
+
+      ! Do the calculations
       print*, x,y
+
    end do
 end do
 

@@ -1,5 +1,6 @@
 # The compiler
-FC = gfortran
+#FC = gfortran
+FC = mpifort
 
 FCFLAGS = -g -fbounds-check
 FCFLAGS = -O2
