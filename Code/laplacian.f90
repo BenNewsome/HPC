@@ -5,14 +5,14 @@ module Laplacian
 contains
 
 subroutine Calculate_reds( Wire_array )
-double precision, intent(inout) :: Wire_array
+double precision, dimension(0:101,0:101), intent(inout) :: Wire_array
 
 integer:: i,j,x,y,x_length,y_length
-x_length=100
-y_length=100
+x_length=10
+y_length=10
 
-do i = 0,x_length,2
-   do j=0,y_length
+do i = 0,x_length
+   do j=0,y_length,2
       !For every other row ofset by 1
       x=i
       y=j
