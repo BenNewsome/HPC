@@ -1,6 +1,6 @@
 !Contains the routines for calculating the laplacians for the array
 
-module Laplacian
+module laplacian
 
 contains
 

@@ -5,16 +5,14 @@ FCFLAGS = -g -fbounds-check
 FCFLAGS = -O2
 FCFLAGS += -I/usr/include
 
-PROGRAMS = main
+exe: main.o
+		$(FC) -o exe main.o laplacian.o
 
-all: $(PROGRAMS)
+main.o: laplacian.o
 
-laplacian.o: laplacian.f90
-
-main.o: main.f90 laplacian.o
-
-%.o: %.f90 ; $(FC) $(FCFLAGS) -c $<
+%.o: %.f90 
+		$(FC) $(FCFLAGS) -c $<
 
 .PHONY: clean
 
-clean:;      rm -f *.o *.mod
+clean:;      rm -f *.o *.mod exe
